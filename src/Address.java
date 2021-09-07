@@ -4,10 +4,9 @@ public class Address extends Passenger
      private String city;
      private String state;
 
-    Address() {
-
+    Address()
+    {
         super();
-
     }
 
 
@@ -41,8 +40,4 @@ public class Address extends Passenger
     public void setState(String state) {
         this.state = state;
     }
-
-
-
-
 }

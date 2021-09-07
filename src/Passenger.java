@@ -1,6 +1,6 @@
 public class Passenger extends Ticket
 {
-     private static int idCounter;
+    private static int idCounter;
     private Address address;
     private Contact contact;
 

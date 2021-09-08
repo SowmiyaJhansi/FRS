@@ -1,19 +1,17 @@
 abstract public class Ticket
 {
-    private String pnr;
-    private String from;
-    private String to;
-    private String departureDateTime;
-    private String arrivalDateTime;
-    private String seatNo;
-    private float price;
-    public boolean cancelled;
+    static String pnr;
+    static String from;
+    static String to;
+    static String departureDateTime;
+    static String arrivalDateTime;
+    static String seatNo;
+    static float price;
+    public static boolean cancelled;
 
     public Ticket() {
 
     }
-
-
 
     public Ticket(String pnr, String from, String to, String departureDateTime, String arrivalDateTime, String seatNo, float price, boolean cancelled) {
         this.pnr = pnr;
@@ -26,7 +24,7 @@ abstract public class Ticket
         this.cancelled = cancelled;
     }
 
-    public String getPnr() {
+    public static String getPnr() {
         return pnr;
     }
 
@@ -41,7 +39,7 @@ abstract public class Ticket
 
     }
 
-    public String getFrom() {
+    public static String getFrom() {
         return from;
     }
 
@@ -55,7 +53,7 @@ abstract public class Ticket
         }
             }
 
-    public String getTo() {
+    public static String getTo() {
         return to;
     }
 
@@ -69,7 +67,7 @@ abstract public class Ticket
         }
     }
 
-    public String getDepartureDateTime() {
+    public static String getDepartureDateTime() {
         return departureDateTime;
     }
 
@@ -77,7 +75,7 @@ abstract public class Ticket
         this.departureDateTime = departureDateTime;
     }
 
-    public String getArrivalDateTime() {
+    public static String getArrivalDateTime() {
         return arrivalDateTime;
     }
 
@@ -85,7 +83,7 @@ abstract public class Ticket
         this.arrivalDateTime = arrivalDateTime;
     }
 
-    public String getSeatNo() {
+    public static String getSeatNo() {
         return seatNo;
     }
 
@@ -101,7 +99,7 @@ abstract public class Ticket
 
     }
 
-    public float getPrice() {
+    public static float getPrice() {
         return price;
     }
 
@@ -110,13 +108,34 @@ abstract public class Ticket
         this.price = price;
     }
 
-        public boolean isCancelled(boolean b) {
+        public static boolean isCancelled() {
             return cancelled;
         }
 
         public void setCancelled(boolean cancelled) {
             this.cancelled = cancelled;
         }
+
+        public int getFlightDuration()
+        {
+            String[] sArray=departureDateTime.split(":");
+            String a1=sArray[0];
+            String a2=sArray[1];
+            String a3=a1.concat(a2);
+            int intDepart = Integer.parseInt(a3);
+            System.out.println(intDepart);
+
+            String[] sArr=arrivalDateTime.split(":");
+            String i1=sArr[0];
+            String i2=sArr[1];
+            String i3=i1.concat(i2);
+            int intArrival = Integer.parseInt(i3);
+            System.out.println(intArrival);
+
+            return intDepart;
+        }
+abstract String ticket();
+
     public String toString() {
         return "Ticket{" +
                 "pnr='" + pnr + '\'' +

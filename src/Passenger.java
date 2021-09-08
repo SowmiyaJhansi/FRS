@@ -1,4 +1,4 @@
-public class Passenger extends Ticket
+class Passenger extends Ticket
 {
     private static int idCounter;
     private Address address;
@@ -28,6 +28,10 @@ public class Passenger extends Ticket
 
     public Passenger() {
         super();
+    }
+
+    String ticket() {
+        return null;
     }
 
     public int getIdCounter() {
@@ -61,6 +65,7 @@ public class Passenger extends Ticket
     public void getContact(Contact contact) {
         this.contact = contact;
     }
+
 
 
     }

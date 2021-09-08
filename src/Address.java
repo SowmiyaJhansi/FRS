@@ -1,14 +1,15 @@
-public class Address extends Passenger
+import java.sql.SQLOutput;
+
+class Address extends Passenger
 {
      private String street;
      private String city;
      private String state;
 
-    Address()
+    public Address()
     {
         super();
     }
-
 
     public Address(String street, String city, String state) {
         super();
@@ -16,8 +17,6 @@ public class Address extends Passenger
         this.city = city;
         this.state = state;
     }
-
-
 
     public void setStreet(String street) {
         this.street = street;
@@ -40,4 +39,16 @@ public class Address extends Passenger
     public void setState(String state) {
         this.state = state;
     }
+
+public String getAddressDetails()
+{
+    System.out.println("Street:"+getStreet());
+    System.out.println("City:"+getCity());
+    System.out.println("State:"+getState());
+    return "Street:"+getStreet()+" "+"City:"+getCity()+"State:"+getState();
+}
+public void updateAddressDetails(String addressDetails)
+{
+    super.getAddress();
+}
 }

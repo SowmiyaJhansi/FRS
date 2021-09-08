@@ -1,5 +1,4 @@
-public class TouristTicket extends Ticket
-{
+public class TouristTicket extends Ticket {
     public String hotelAddress;
     private String selectedTouristLocation;
 
@@ -34,12 +33,8 @@ public class TouristTicket extends Ticket
         super();
     }
 
-
-    public String toString() {
-        return "TouristTicket{" +
-                "cancelled=" + cancelled +
-                ", hotelAddress='" + hotelAddress + '\'' +
-                ", selectedTouristLocation='" + selectedTouristLocation + '\'' +
-                '}';
+    String ticket() {
+        return null;
     }
+
 }

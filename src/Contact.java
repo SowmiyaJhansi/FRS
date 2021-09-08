@@ -36,4 +36,15 @@ public class Contact extends Passenger {
         this.emailId = emailId;
     }
 
+    public String getContactDetails()
+    {
+        System.out.println("Name:"+getName());
+        System.out.println("Phone No:"+getPhoneNo());
+        System.out.println("EmailId:"+getEmailId());
+        return "Name:"+getName()+" "+"PhoneNo:"+getPhoneNo()+" "+"EmailId:"+getEmailId();
+    }
+
+    public void getContactDetails(Contact contact) {
+        super.getContact(contact);
+    }
 }
